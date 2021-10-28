@@ -20,12 +20,13 @@
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-60">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">Al Horno</a>
+            <a class="navbar-brand fw-bolder" href="index.html">Al Horno</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#top">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">¿Quienes somos?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contactanos</a></li> 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -35,7 +36,7 @@
                             </li>
                             <li><a class="dropdown-item" href="#!"> Productos populares</a></li>
                             <li><a class="dropdown-item" href="#!">Plato del dia</a></li>
-                        </ul>
+                        </ul>                     
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -49,7 +50,7 @@
         </div>
     </nav>
     <!-- Titulo-->
-    <header class="bg-opacity-60 py-5" style="height: 600px; background-color: orangered;">
+    <header id="top" class="bg-opacity-60 py-5" style="height: 600px; background-color: orangered;">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
                 <h1 class="display-4 fw-bolder" style="margin-top: 200px;">Bienvenidos Al Horno</h1>
@@ -293,7 +294,7 @@
         </div>
     </section>
 
-    <section class="bg-opacity-60 py-5" style="height: 1000px; background-color: indigo; text-align: left; flex-wrap: wrap;">
+    <section id="contact" class="bg-opacity-60 py-5" style="height: auto; background-color: indigo; text-align: left; flex-wrap: wrap;">
         <div class="row">
             <div class="col-md-6">
                 <div class="container px-4 px-lg-5 my-5">
@@ -303,18 +304,23 @@
                             <p class="lead fw-bolder text-white-50 mb-0" style="margin-top: 20px; margin-left: 5px; text-align: left;">Encuentranos en redes sociales como:</p>
                         </div>
                         <div>
-                            <a href="#" style="text-decoration:none;">
-                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-facebook-f"></i> Facebook: Al Horno SV</p>
+                            <a href="https://www.facebook.com/alhornosv" style="text-decoration:none;">
+                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-facebook-f"></i> Al Horno SV</p>
                             </a>
                         </div>
                         <div>
-                            <a href="#" style="text-decoration:none;">
-                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-instagram"></i> Instagram: Al Horno SV </p>
+                            <a href="https://instagram.com/alhornosv?utm_medium=copy_link" style="text-decoration:none;">
+                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-instagram"></i> @alhornosv </p>
                             </a>
                         </div>
                         <div>
-                            <a href="#" style="text-decoration:none;">
-                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-whatsapp"></i> WhatsApp: Al Horno SV </p>
+                            <a href="https://api.whatsapp.com/message/GAPO2L6MFQ3MO1" style="text-decoration:none;">
+                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-whatsapp"></i> Al Horno SV </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://vm.tiktok.com/ZM8adFhQe/" style="text-decoration:none;">
+                                <p class="lead fw-normal text-white" style="margin-top: 20px; margin-left: 5px; text-align: left;"><i class="fab fa-brands fa-tiktok"></i> @alhorno.sv</p>
                             </a>
                         </div>
                     </div>
@@ -326,7 +332,7 @@
                         <h1 class="display-4 fw-bolder" style="margin-top: 800px; text-align:center; margin-right: 5px; margin-top: 5px;">¿Comentarios?</h1>
                     </div>
                     <div>
-                        <p class="lead fw-bolder text-white-50 mb-0" style="margin-top: 20px; margin-left: 5px; text-align: left;">Haznos saber llenando el siguiente formulario</p>
+                        <p class="lead fw-bolder text-white-50 mb-0" style="margin-top: 20px; margin-left: 5px; text-align: left;">Haznos saber tu opinión llenando el siguiente formulario</p>
                     </div>
                     <br>
                     <div class="mb-3">
@@ -338,12 +344,12 @@
                         <input type="email" class="form-control" id="Input2" placeholder="nombre@ejemplo.com">
                     </div>
                     <div class="mb-3">
-                        <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Mesero que atendio</label>
+                        <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Mesero que le atendió</label>
                         <input type="text" class="form-control" id="Input3" placeholder="Introduzca un nombre valido">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label lead fw-bolder text-white-50 mb-0">Comentarios</label>
-                        <textarea type="textarea" class="form-control" id="Textarea1" rows="3"></textarea>
+                        <textarea type="textarea" class="form-control" id="Textarea1" placeholder="Deja tu opinión" rows="3"></textarea>
                     </div>
                 </div>
             </div>
