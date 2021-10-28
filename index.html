@@ -344,36 +344,53 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="container px-4 px-lg-5 my-5">
-                    <div class="text-center text-white">
-                        <h1 class="display-4 fw-bolder" style="margin-top: 800px; text-align:center; margin-right: 5px; margin-top: 5px;">¿Comentarios?</h1>
-                    </div>
-                    <div>
-                        <p class="lead fw-bolder text-white-50 mb-0" style="margin-top: 20px; margin-left: 5px; text-align: left;">Haznos saber tu opinión llenando el siguiente formulario</p>
-                    </div>
-                    <br>
-                    <div class="mb-3">
-                        <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Nombre Completo</label>
-                        <input type="text" class="form-control" id="Input1" placeholder="Introduzca un nombre valido">
-                    </div>
-                    <div class="mb-3">
-                        <label for="Input2" class="form-label lead fw-bolder text-white-50 mb-0">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="Input2" placeholder="nombre@ejemplo.com">
-                    </div>
-                    <div class="mb-3">
 
-                        <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Mesero que le atendió</label>
-                        <input type="text" class="form-control" id="Input3" placeholder="Introduzca un nombre valido">
+            <div class="col-md-6">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="container px-4 px-lg-5 my-5">
+                        <div class="text-center text-white">
+                            <h1 class="display-4 fw-bolder" style="margin-top: 800px; text-align:center; margin-right: 5px; margin-top: 5px;">¿Comentarios?</h1>
+                        </div>
+                        <div>
+                            <p class="lead fw-bolder text-white-50 mb-0" style="margin-top: 20px; margin-left: 5px; text-align: left;">Haznos saber tu opinión llenando el siguiente formulario</p>
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Nombre Completo</label>
+                            <input type="text" class="form-control" id="Input1" placeholder="Introduzca un nombre valido" required>
+                            <div class="valid-feedback">
+                                ¡Bonito nombre!
+                            </div>
+                            <div class="invalid-feedback">
+                                Por favor introduzca su nombre.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Input2" class="form-label lead fw-bolder text-white-50 mb-0">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="Input2" placeholder="nombre@ejemplo.com" required>
+                            <div class="invalid-feedback">
+                                Por favor, introduzca un correo electrónico valido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Mesero que le atendió</label>
+                            <input type="text" class="form-control" id="Input3" placeholder="Introduzca un nombre valido" required>
+                            <div class="invalid-feedback">
+                                Por favor introduzca un nombre valido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label lead fw-bolder text-white-50 mb-0">Comentarios</label>
+                            <textarea type="textarea" class="form-control" id="Textarea1" placeholder="Deja tu opinión" rows="3" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor, escriba sus comentarios.
+                            </div>
+                        </div>
+                        <div class="mb-3" style="text-align:center;">
+                            <input type="submit" class="btn" id="Btn1" value="Enviar" style="text-align: center; background-color:orange;" rows="3">
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label lead fw-bolder text-white-50 mb-0">Comentarios</label>
-                        <textarea type="textarea" class="form-control" id="Textarea1" placeholder="Deja tu opinión" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3" style="text-align:center;">
-                        <input type="button" class="btn" id="Btn1" value="Enviar" style="text-align: center; background-color:orange;" rows="3">
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -386,6 +403,32 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                            Swal.fire('Por favor ingrese datos validos')
+                        } else {
+                            Swal.fire('Gracias por sus comentarios')
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
 </body>
 
 </html>
