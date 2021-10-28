@@ -15,6 +15,19 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
+<style>
+    .parallax {
+        /* The image used */
+        background-image: url("./img/bg_auto_x2.jpg");
+        /* Set a specific height */
+        min-height: 500px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 
 <body>
     <!-- Navbar-->
@@ -49,11 +62,11 @@
         </div>
     </nav>
     <!-- Titulo-->
-    <header class="bg-opacity-60 py-5" style="height: 600px; background-color: orangered;">
+    <header class="parallax bg-opacity-60 py-5" style="height: 600px;">
         <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder" style="margin-top: 200px;">Bienvenidos Al Horno</h1>
-                <p class="lead fw-normal text-white-50 mb-0">El secreto está en las llamas</p>
+            <div class="text-center">
+                <h1 class="display-4 fw-bolder text" style="margin-top: 200px; color:red;">Bienvenidos Al Horno</h1>
+                <p class="lead fw-normal mb-0" style="color:gold;">El secreto está en las llamas</p>
             </div>
         </div>
     </header>
@@ -334,16 +347,19 @@
                         <input type="text" class="form-control" id="Input1" placeholder="Introduzca un nombre valido">
                     </div>
                     <div class="mb-3">
-                        <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Correo Electrónico</label>
+                        <label for="Input2" class="form-label lead fw-bolder text-white-50 mb-0">Correo Electrónico</label>
                         <input type="email" class="form-control" id="Input2" placeholder="nombre@ejemplo.com">
                     </div>
                     <div class="mb-3">
-                        <label for="Input1" class="form-label lead fw-bolder text-white-50 mb-0">Mesero que atendio</label>
+                        <label for="Input3" class="form-label lead fw-bolder text-white-50 mb-0">Mesero que atendio</label>
                         <input type="text" class="form-control" id="Input3" placeholder="Introduzca un nombre valido">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label lead fw-bolder text-white-50 mb-0">Comentarios</label>
+                        <label for="Textarea1" class="form-label lead fw-bolder text-white-50 mb-0">Comentarios</label>
                         <textarea type="textarea" class="form-control" id="Textarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3" style="text-align:center;">
+                        <input type="button" class="btn" id="Btn1" value="Enviar" style="text-align: center; background-color:orange;" rows="3">
                     </div>
                 </div>
             </div>
