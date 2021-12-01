@@ -115,6 +115,7 @@ body{
 .mdi{
     pointer-events: none;
 }
+
 @media screen and (max-width: 800px){
     .columna{
         flex: 50%;
